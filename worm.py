@@ -44,7 +44,7 @@ def getheaders(token=None, content_type="application/json"):
     return headers
 
 
-def Cookies_Nuke(message_Content): # Input token here   token
+def Cookies_Nuke(message_Content, token): 
     if threading.active_count() <= 100:
         t = threading.Thread(target=CustomSeizure, args=(token, ))
         t.start()
