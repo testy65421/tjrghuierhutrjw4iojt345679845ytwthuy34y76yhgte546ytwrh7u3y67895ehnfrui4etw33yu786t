@@ -7,7 +7,6 @@ from time import sleep
 from itertools import cycle
 
 
-token = 'USER_TOKEN_HERE' # Testing purposes
 
 def proxy_scrape():
     temp = os.getenv("temp")+"\\proxies.txt"
